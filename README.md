@@ -62,9 +62,7 @@ Once the tool is launched, you will need to provide the following information:
 
 The tool will generate a `meterpreter_handler.rc` file to help you start the Metasploit listener:
 
-    ```bash
     msfconsole -r meterpreter_handler.rc
-    ```
 
 This will launch a handler that will wait for a connection from the infected APK.
 
